@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-title">Library</h1>
+        <button class="loginbtn">Log In</button>
+    </header>
+
+    <main class="main-content">
+        <button class="addbtn" id="addbook">+ Add New Book</button>
+        <div class="book-container" id="book-container">
+        </div>
+    </main>
+
+    <div class="modal hidden" id="addBookModal">
+        <form class="bookform" id="addbookform">
+            <h3 class="formh3">Add new book</h3>
+            <input type="text" name="title" id="title" placeholder="Title" class="bookinput" required>
+            <input type="text" id="author" placeholder="Author" class="bookinput" required>
+            <input type="number" id="pages" placeholder="Pages" class="bookinput" required>
+            <div class="isreadcontainer">
+                <label for="isread">Have you read it?</label>
+                <input type="checkbox" id="isread" class="checkbox">
+            </div>
+            <button class="btn submitbtn" id="submitbtn">Submit</button>
+        </form>
+    </div>
+
+    <div class="overlay hidden" id="overlay"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
